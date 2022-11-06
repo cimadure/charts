@@ -1,7 +1,12 @@
 image:
-  repository: tccr.io/truecharts/octoprint
-  tag: 1.8.6@sha256:74865bb376361a7df850109021715e63d3c04c64257db7d1772a53d413e0d28e
+  repository: https://hub.docker.com/r/erlafont/octoprint
+  tag: 1.8.6
   pullPolicy: IfNotPresent
+
+
+#  - https://github.com/cimadure/charts/tree/master/charts/stable/octoprint
+#  - https://github.com/elafontaine/octoprint-docker
+#  - https://hub.docker.com/r/erlafont/octoprint
 
 securityContext:
   runAsNonRoot: false
@@ -15,9 +20,13 @@ env:
   # -- sets the Mjpg stream imput parameters
   # Example "-y -n -r 640x480"
   MJPG_STREAMER_INPUT:
+  MJPG_STREAMER_INPUT_2:
+  MJPG_STREAMER_INPUT_3:
   # -- sets the camera dev parameters
   # Example "/dev/video0"
   CAMERA_DEV:
+  CAMERA_DEV_2:
+  CAMERA_DEV_3:
 
 service:
   main:
